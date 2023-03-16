@@ -1,7 +1,10 @@
+import { AppContainer } from "./styles"
 
+export const App = () => {
+  return <AppContainer>
 
-function App() {
-  return null
+  </AppContainer>
 }
 
-export default App;
+
+
