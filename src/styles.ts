@@ -39,7 +39,7 @@ type AddItemButtonProps = {
 }
 
 export const AddItemButton = styled.button<AddItemButtonProps>`
-    background-color: #ffffff3d;
+    background-color: #ffffff3d; 
     border-radius: 999px;
     border: none;
     color: ${props => (props.dark ? "#000" : "#fff")};
@@ -63,7 +63,8 @@ align-items: flex-start;
 `
 
 export const NewItemButton = styled.button`
-    background-color: #5aac44; border-radius: 3px;
+    background-color: #5aac44; 
+    border-radius: 3px;
     border: none;
     box-shadow: none;
     color: #fff;
@@ -73,8 +74,9 @@ export const NewItemButton = styled.button`
 
 export const NewItemInput = styled.input`
 border-radius: 3px;
-border: none;
-box-shadow: #091e4240 0px 1px 0px 0px; margin-bottom: 0.5rem;
+border: 1px solid #ecd5f9;
+  background-color: #e4e4e4;
+margin-bottom: 0.5rem;
   padding: 0.5rem 1rem;
   width: 100%;
 `
