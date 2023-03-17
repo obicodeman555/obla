@@ -35,7 +35,7 @@ margin-bottom: 0.5rem;
 `
 
 type AddItemButtonProps = {
-    dark?: boolean
+  dark?: boolean
 }
 
 export const AddItemButton = styled.button<AddItemButtonProps>`
@@ -64,7 +64,7 @@ align-items: flex-start;
 
 export const NewItemButton = styled.button`
     background-color: #5aac44; 
-    border-radius: 3px;
+    border-radius: 999px;
     border: none;
     box-shadow: none;
     color: #fff;
@@ -75,7 +75,7 @@ export const NewItemButton = styled.button`
 export const NewItemInput = styled.input`
 border-radius: 3px;
 border: 1px solid #ecd5f9;
-  background-color: #e4e4e4;
+  background-color: #EAF1FB;
 margin-bottom: 0.5rem;
   padding: 0.5rem 1rem;
   width: 100%;
