@@ -1,9 +1,10 @@
 import { AddNewItem } from "./components/AddNewItem"
 import { AppContainer, AppHeader } from "./styles"
 import { Column } from "./components/Column"
-import { Card } from "./components/Card"
+import { useAppState } from "./state/AppStateContext"
 
 export const App = () => {
+  const { lists } = useAppState();
 
   return (
     <>
@@ -11,17 +12,12 @@ export const App = () => {
         <AddNewItem toggleButtonText="+ Add another list" onAdd={console.log} />
       </AppHeader>
       <AppContainer>
+        {
+          lists.map((list) => (
+            <Column text={list.text} key={list.id} id={list.id} />
+          ))
+        }
 
-        <Column text="To Do">
-          <Card text="Generate app scaffold" />
-        </Column>
-        <Column text="In Progress">
-          <Card text="Learn TypeScript" />
-        </Column>
-
-        <Column text="Done">
-          <Card text="Begin to use static Typing" />
-        </Column>
 
       </AppContainer>
     </>
