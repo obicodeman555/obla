@@ -2,12 +2,19 @@ import styled from "styled-components";
 
 export const AppContainer = styled.div`
     align-items: flex-start; 
-    background-color: #7201ba;
     display: flex;
     flex-direction: row;
     height: 100%;
     padding: 20px;
     width: 100%;
+`
+
+export const AppHeader = styled.header`
+  display: flex;
+  padding: 20px;
+  &>*:not(:first-child){
+    margin-left: 1rem
+  }
 `
 
 export const ColumnContainer = styled.div`
