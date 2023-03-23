@@ -17,8 +17,6 @@ export const App = () => {
             <Column text={list.text} key={list.id} id={list.id} />
           ))
         }
-
-
       </AppContainer>
     </>
   )
