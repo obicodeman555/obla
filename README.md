@@ -5,3 +5,10 @@ The core functionality of Obla are:
 (i)creating tasks; 
 (ii) making list;
 (iii) and dragging them around.
+
+
+Technology Used include:
+(i) React JS
+(iii) TypeScript
+(iii) Redux
+
