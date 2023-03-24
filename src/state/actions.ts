@@ -11,7 +11,7 @@ interface AddTaskAction {
 }
 
 
-type Action = AddListAction | AddTaskAction
+export type Action = AddListAction | AddTaskAction
 
 
 export const addTask = (
