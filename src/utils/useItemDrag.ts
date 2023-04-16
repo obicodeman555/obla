@@ -13,7 +13,8 @@ export const useItemDrag = (item: DragItem) => {
         item: () => {
             dispatch(setDraggedItem(item));
             return item
-        }, end: () => dispatch(setDraggedItem(null))
+        },
+        end: () => dispatch(setDraggedItem(null))
     });
 
     useEffect(() => {

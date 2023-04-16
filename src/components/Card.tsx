@@ -1,10 +1,10 @@
 import { CardContainer } from "../styles";
-import { useRef, useState } from "react"
+import { useRef } from "react"
 import { useItemDrag } from "../utils/useItemDrag"
 import { useDrop } from "react-dnd"
 import { useAppState } from "../state/AppStateContext";
 import { isHidden } from "../utils/isHidden"
-import { moveTask, setDraggedItem } from "../state/actions"
+import { moveTask } from "../state/actions"
 
 type CardProps = {
     text: string,

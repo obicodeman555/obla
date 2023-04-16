@@ -17,7 +17,7 @@ export const App = () => {
         <CustomDragLayer />
         {
           lists.map((list) => (
-            <Column text={list.text} key={list.id} id={list.id} />
+            <Column listTitle={list.listTitle} key={list.id} id={list.id} />
           ))
         }
       </AppContainer>

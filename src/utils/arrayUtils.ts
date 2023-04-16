@@ -4,7 +4,7 @@ type Item = {
 
 export const findItemIndexById = <TItem extends Item>(items: TItem[],
     id: string) => {
-    return items.findIndex((item: TItem) => item.id === id)
+    return items.findIndex((item: TItem) => item?.id === id)
 }
 
 export const removeItemAtIndex = <TItem>(array: TItem[], index: number) => {

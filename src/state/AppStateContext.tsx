@@ -10,17 +10,17 @@ const appData: AppState = {
     lists: [
         {
             id: "0",
-            text: "To Do",
+            listTitle: "To Do",
             tasks: [{ id: "c0", text: "Generate app scaffold" }]
         },
         {
             id: "1",
-            text: "In Progress",
+            listTitle: "In Progress",
             tasks: [{ id: "c1", text: "Learn TypeScript" }]
         },
         {
             id: "2",
-            text: "Done",
+            listTitle: "Done",
             tasks: [{ id: "c2", text: "Begin to use static typing" }]
         },
     ]
