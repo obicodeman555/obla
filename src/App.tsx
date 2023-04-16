@@ -1,15 +1,16 @@
 import { AddNewItem } from "./components/AddNewItem"
 import { AppContainer, AppHeader } from "./styles"
 import { Column } from "./components/Column"
-import { useAppState } from "./state/AppStateContext"
+import { useAppState } from "./state/AppStateContext";
+import { addList } from "./state/actions";
 
 export const App = () => {
-  const { lists } = useAppState();
+  const { lists, dispatch } = useAppState();
 
   return (
     <>
       <AppHeader>
-        <AddNewItem toggleButtonText="+ Add another list" onAdd={console.log} />
+        <AddNewItem toggleButtonText="+ Add another list" onAdd={text => dispatch(addList(text))} />
       </AppHeader>
       <AppContainer>
         {
