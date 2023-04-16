@@ -23,9 +23,19 @@ interface SetDraggedItem {
     payload:
     DragItem | null
 }
+interface MoveTask {
+
+    type: "MOVE_TASK",
+    payload: {
+        draggedItemId: string
+        hoveredItemId: string | null
+        sourceColumnId: string,
+        targetColumnId: string
+    }
+}
 
 
-export type Action = AddListAction | AddTaskAction | MoveList | SetDraggedItem
+export type Action = AddListAction | AddTaskAction | MoveList | SetDraggedItem | MoveTask
 
 
 export const addTask = (
@@ -57,3 +67,17 @@ export const setDraggedItem = (draggedItem: DragItem | null,): Action => ({
     type: "SET_DRAGGED_ITEM",
     payload: draggedItem
 })
+
+
+export const moveTask = (draggedItemId: string,
+    hoveredItemId: string | null,
+    sourceColumnId: string,
+    targetColumnId: string): Action => ({
+        type: "MOVE_TASK",
+        payload: {
+            draggedItemId,
+            hoveredItemId,
+            sourceColumnId,
+            targetColumnId
+        }
+    })
