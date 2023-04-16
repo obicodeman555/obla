@@ -17,12 +17,41 @@ export const AppHeader = styled.header`
   }
 `
 
-interface DragPreviewContainerProps {
-  isHidden?: boolean
+type DragPreviewContainerProps = {
+  isHidden?: boolean,
+  isPreview?: boolean
 }
 
+type DragPreviewWrapperProps = {
+  position: {
+    x: number,
+    y: number
+  }
+}
+
+export const DragPreviewWrapper = styled.div.attrs<DragPreviewWrapperProps>(
+
+  ({ position: { x, y } }) => ({
+    style: {
+      transform: `translate(${x}px, ${y}px)`
+    }
+  })
+) <DragPreviewWrapperProps>``
+
 export const DragPreviewContainer = styled.div<DragPreviewContainerProps>`
-opacity: ${props => props.hidden ? 0.3 : 1}
+opacity: ${props => props.isHidden ? 0 : 1};
+transition: transform 300ms ease-in;
+transform: ${props => (props.isPreview ? 'rotate(5deg)' : undefined)}
+`
+
+export const CustomDragLayerContainer = styled.div`
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
 `
 
 export const ColumnContainer = styled(DragPreviewContainer)`

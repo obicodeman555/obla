@@ -3,6 +3,7 @@ import { AppContainer, AppHeader } from "./styles"
 import { Column } from "./components/Column"
 import { useAppState } from "./state/AppStateContext";
 import { addList } from "./state/actions";
+import { CustomDragLayer } from "./components/CustomDragLayer";
 
 export const App = () => {
   const { lists, dispatch } = useAppState();
@@ -13,6 +14,7 @@ export const App = () => {
         <AddNewItem toggleButtonText="+ Add another list" onAdd={text => dispatch(addList(text))} />
       </AppHeader>
       <AppContainer>
+        <CustomDragLayer />
         {
           lists.map((list) => (
             <Column text={list.text} key={list.id} id={list.id} />
